@@ -39,9 +39,6 @@
         "hillshade": {
             "mbtiles": "hillshade.mbtiles"
         },
-        "contour_10": {
-            "mbtiles": "contour_10.mbtiles"
-        },
         "contour_20": {
             "mbtiles": "contour_20.mbtiles"
         },
