@@ -19,6 +19,12 @@
                 "type": "overlay"
             }
         },
+        "bright": {
+            "style": "osm-bright/style.json",
+            "tilejson": {
+                "type": "overlay"
+            }
+        },
         "dark": {
             "style": "dark-matter/style.json",
             "tilejson": {
