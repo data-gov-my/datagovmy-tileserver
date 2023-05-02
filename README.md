@@ -8,13 +8,13 @@ Contains an open-source map-tiling server, [tileserver-gl](http://tileserver.org
 
 ## You can find:
 
-| Resources                           | Type   | Format   | Applicable Style     | Description                                    |
-| ----------------------------------- | ------ | -------- | -------------------- | ---------------------------------------------- |
-| Map of Malaysia, Singapore & Brunei | Vector | .mbtiles | light, dark, terrain | Macro view up to street/residential level view |
-| 20m Contour lines                   | Vector | .mbtiles | terrain              | Contour lines with a vertical distance of 20m  |
-| 40m Contour lines                   | Vector | .mbtiles | terrain              | Contour lines with a vertical distance of 40m  |
-| 80m Contour lines                   | Vector | .mbtiles | terrain              | Contour lines with a vertical distance of 10m  |
-| High resolution hillshade           | Raster | .mbtiles | terrain              | Hillshade based on elevation                   |
+| Resources                           | Type   | Format   | Applicable Style             | Description                                    |
+| ----------------------------------- | ------ | -------- | ---------------------------- | ---------------------------------------------- |
+| Map of Malaysia, Singapore & Brunei | Vector | .mbtiles | light, dark, bright, terrain | Macro view up to street/residential level view |
+| 20m Contour lines                   | Vector | .mbtiles | terrain                      | Contour lines with a vertical distance of 20m  |
+| 40m Contour lines                   | Vector | .mbtiles | terrain                      | Contour lines with a vertical distance of 40m  |
+| 80m Contour lines                   | Vector | .mbtiles | terrain                      | Contour lines with a vertical distance of 10m  |
+| High resolution hillshade           | Raster | .mbtiles | terrain                      | Hillshade based on elevation                   |
 
 ## Development
 
@@ -47,9 +47,25 @@ docker compose up
 
 To stop the server:
 
-```bash
+```bash copy
 docker compose down
 ```
+
+To build docker image: (replace version number accordingly)
+
+```sh
+docker build -t datagovmy/tileserver:<major.minor.patch> .
+```
+
+To push to registry:
+
+```sh
+docker push datagovmy/tileserver:<major.minor.patch>
+```
+
+---
+
+### Preview
 
 To checkout the map tiles and preview the styles & layers, open up http://localhost:8080 in your browser.
 
